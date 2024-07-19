@@ -1,0 +1,63 @@
+.table-skeleton {
+    padding: 20px 10px;
+    position: relative;
+
+    .message {
+        position: absolute;
+        top: 0px;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        //    background-color: rgba;
+        padding: 10px;
+        z-index: 1;
+        border-radius: 4px;
+        backdrop-filter: blur(3px);
+        text-align: center;
+        padding-top: 40px;
+        font-size: 12px;
+        //    font-weight: 500;
+        color: color(secondary);
+        @include mq(576px) {
+            font-size: 16px;
+        }
+    }
+    img {
+        width: 30px;
+        position: absolute;
+        z-index: 1;
+        top: 80px;
+        left: 50%;
+        transform: translateX(-50%);
+        filter: grayscale(100%);
+        border-radius: 8px;  
+              
+    }
+    .line {
+        height: 20px;
+        background-color: color(light, 0.3);
+        margin-bottom: 10px;
+        position: relative;
+        overflow: hidden;
+        &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, transparent, color(secondary, 0.05), transparent);
+            animation: loading 1s infinite;
+        }
+    }
+}
+
+@keyframes loading {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}

@@ -1,0 +1,212 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    // gap: 5px;
+    justify-content: space-between;
+    padding: 5px 10px;
+    position: sticky;
+    top: 10px;
+    left: 0;
+    z-index: 997;
+    // backdrop-filter: saturate(200%) blur(1.875rem);
+
+    // transition: background-color .3s ease, transform .3s ease, box-shadow .3s ease, top .3s ease;
+    border-radius: 15px;
+    // padding-bottom: 5px;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+    &-divider {
+        border-color: color(secondary, 0.1);
+        border-width: 0 0 1px 0;
+        margin-bottom: 25px;
+    }
+    &.shrink {
+        // padding: 5px 10px;
+        // top: 30px;
+        // transform: translateY(5px);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        // border: none;
+        background-color: color(dark);
+        .deposit-btn {
+            font-size: 0.8125rem;
+            padding: 2px 10px;
+          
+        }
+        .profile {
+            color: #fff;
+        }
+        .sidebar-toggler-show {
+            color: #fff;
+        }
+        .navbar-title {
+            color: #fff;
+        }
+        .profile-image {
+            img {
+                width: 33px;
+                height: 33px;
+                // border: 2px solid rgba(255,255,255,0.9);
+                // border: 2px solid color(light,.3);
+            }
+        }
+        .budget {
+            // background-color: color(success, 0.3);
+            border-color: rgba(255, 255, 255, 0.2);
+            &-title {
+                color: #fff;
+            }
+            &-balance {
+                color: #fff;
+            }
+        }
+    
+    }
+    .budget {
+        font-size: 12px;
+        color: #000;
+        // background-color: color(success, 0.1);
+        border-radius: 5px;
+        padding: 4px 6px;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        // box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        &-title {
+            display: none;
+            @include mq(576px){
+                display: block;
+            }
+        }
+        &-balance {
+            font-weight: bold;
+        }
+    }
+    & > .wrapper {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        @include mq(576px){
+            gap: 10px;
+
+        }
+    }
+    &-title {
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: capitalize;
+        // transition: color .3s ease;
+        display: none;
+        @include mq(576px) {
+            font-size: 16px;
+            display: block;
+        }
+
+        &-sm-media {
+            display: block;
+            width: 100%;
+            margin-bottom: 5px;
+            position: relative;
+            text-align: center;
+            // background-color: color(dark);
+            transition: .3s ease;
+            padding-bottom: 5px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            @include mq(576px) {
+                display: none;
+            }
+        }
+    }
+    .deposit-btn {
+        transition: 0.3s ease;
+        font-size: 0.8125rem;
+        padding: 2px 10px;
+        margin: 0 8px;
+        display: none;
+        @include mq(576px) {
+            display: flex;
+        }
+    }
+    // .deposit-btn {
+    //     font-size: 0.8125rem;
+    //     padding: 4px 10px;
+    //     svg {
+    //         width: 14px;
+    //         height: 14px;
+    //     }
+    //     @include mq(576px){
+    //         svg {
+
+    //             width: 12px;
+    //             height: 12px;
+    //         }
+    //     }
+    // }
+    .profile {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        &-image {
+            
+            img {
+                border: 2px solid #e3e3e3;
+                transition: 0.3s ease;
+                width: 33px;
+                height: 33px;
+                object-fit: cover;
+                display: block;
+                border-radius: 50%;
+                @include mq(576px) {
+                    width: 48px;
+                    height: 48px;
+                }
+            }
+        }
+        &-name {
+            text-transform: capitalize;
+            font-size: 14px;
+            font-weight: 400;
+        }
+    }
+}
+
+.drawer {
+    & > div {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    &-toggler {
+        & > .btn {
+            padding-top: 4px;
+            padding-bottom: 4px;
+        }
+    }
+    &-header {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 17px;
+        img {
+            width: 70px;
+            height: 70px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 2px solid #e3e3e3;
+        }
+    }
+    &-body {
+     flex: 1;
+    }
+    &-footer {
+        & > .wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-bottom: 30px;
+        }
+
+    }
+}

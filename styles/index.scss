@@ -1,0 +1,23 @@
+@import './partials/features';
+@import './globals';
+@import './partials/structure';
+
+@import '../app/page';
+@import '../app/graph';
+
+// COMPONENTS
+@import '../components/sidebar/sidebar';
+@import '../components/navbar/navbar';
+@import '../components/Drawer/Drawer';
+@import '../components/modal/modal';
+@import '../components/modal/nested-modal/nested-modal';
+@import '../components/Button/Button';
+@import '../components/Field/Field';
+@import '../components/dropdown/dropdown';
+@import '../components/tabs/tabs';
+@import '../components/swiper/carousel/carousel';
+@import '../components/checkbox/checkbox';
+@import '../components/connect-wallet/connect-wallet';
+@import '../components/wizard/wizard';
+@import '../components/charts/recharts/recharts';
+@import '../components/skeleton/table-skeleton/table-skeleton';

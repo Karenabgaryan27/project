@@ -1,0 +1,35 @@
+.websites-page {
+    & > .row {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 15px 30px;
+        justify-content: space-between;
+        margin-bottom: 25px;
+    }
+
+
+}
+.campaigns-table-wrapper {
+    & > .row {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .dropdown {
+            &-menu {
+                left: auto;
+                right: 0;
+            }
+        }
+        .csv-btn-link {
+            margin-left: auto;
+            margin-right: 0 !important;
+            &.disabled {
+                pointer-events: none;
+                opacity: 0.3;;
+            }
+        }
+    }
+}

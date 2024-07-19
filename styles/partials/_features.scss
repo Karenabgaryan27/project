@@ -1,0 +1,141 @@
+// COLORS
+$colors: (
+    // primary: "25, 118, 210",  
+    primary: '21, 161, 197',           
+    // primary-hover: "21, 101, 192",             
+    primary-hover: "19, 143, 175",             
+    primary-v2: "21, 161, 197",
+    info: "13, 202, 240",
+    // success: "46, 125, 50",
+    // success: "57, 249, 147",
+    success: "42, 171, 126",
+    // success-hover: "44, 233, 133",
+    success-hover: "35, 149, 110",
+    success-v2: "0, 144, 68",
+    // warning: "237, 108, 2",
+    warning: "245, 167, 49",
+    warning-hover: "202, 91, 0",
+    // danger: "211, 47, 47",
+    danger: "249, 57, 57",
+    danger-hover: "188, 22, 22",
+    danger-v2: "255, 113, 139",
+    // dark: "33, 37, 41",
+    dark: "6, 23, 38",
+    dark-hover: "0,0,0",
+    // secondary: "108, 117, 125",
+    secondary: "56, 69, 81",
+    secondary-hover: "85, 91, 96",
+    secondary-v2: "106, 116, 125",
+    // light: "248, 249, 250",
+    light: "219, 222, 225",
+    // light-hover: '221, 223, 226',
+    light-hover: '201, 204, 208',
+    muted: "106, 116, 125",
+    // purple: "150, 45, 255",
+    purple: "53, 12, 133",
+    purple-hover: "42, 11, 103",
+    blue: '0, 122, 255',
+    dark-mode: '17,17,17',
+    // marketplace: '0, 59, 51',
+    marketplace: '31, 131, 82',
+    // marketplace: '22, 123, 121',
+    // marketplace: '61, 132, 140',
+    // marketplace: '94, 204, 155',
+    // marketplace: '33, 92, 100',
+    // marketplace: '76, 185, 146',
+    // marketplace: '108, 205, 170',
+    // marketplace: '24, 160, 129',
+    // marketplace: '0, 182, 122',
+    // marketplace: '101, 119, 43',
+    // marketplace: '84, 152, 101',
+    // marketplace: '6, 186, 167',
+    // marketplace: '8, 183, 176',
+    // marketplace: '22, 229, 196',
+    // marketplace: '71, 191, 164',
+    // marketplace: '48, 104, 68',
+    // marketplace: '74, 112, 78',
+    // marketplace: '5, 172, 114',
+    // marketplace: '5, 102, 68',
+    // marketplace-hover: '1, 47, 41',
+    marketplace-hover: '28, 108, 69',
+    pale-dark: '10, 42, 70',
+    pale-dark-hover: '8, 34, 57',
+
+);
+
+
+@function color($property: primary, $a: 1) {
+    $color: map-get($colors, $property);
+    @return #{"rgba(#{$color},#{$a})"};
+}
+
+//  FONT SIZES
+$fontSizes: (
+    sm: 0.8rem,
+    md: 1rem,
+    lg: 1.2rem,
+);
+
+@function fontSize($property: md) {
+    @return map-get($fontSizes, $property);
+}
+
+// GRADIENTS
+$gradients: (
+    primary: linear-gradient(180deg, color(info), color(success)),
+);
+
+@function gradient($property: primary) {
+    @return map-get($gradients, $property);
+}
+
+// SHADOWS
+$shadows: (
+    success: 0 3px 10px rgba(37, 174, 21, 1),
+);
+
+@function shadow($property: success) {
+    @return map-get($shadows, $property);
+}
+
+// BREAKPOINTS
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px,
+    xxxl: 3840px,
+);
+
+@mixin mq($size: 768px) {
+    @media screen and (min-width: #{$size}) {
+        @content;
+    }
+}
+
+@function breakpoint($property: md) {
+    @return map-get($grid-breakpoints, $property);
+}
+
+// MIXINS
+
+@mixin df($horizontal: center, $vertical: center) {
+    display: flex;
+    justify-content: $horizontal;
+    align-items: $vertical;
+}
+
+@mixin pos($type: absolute) {
+    position: $type;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin text() {
+    line-height: 1.5;
+    color: color(secondary);
+    letter-spacing: 0.03em;
+}
