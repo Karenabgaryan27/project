@@ -14,7 +14,6 @@ import {
     Modal,
 } from "../index.jsx";
 import { v4 as uuidv4 } from "uuid";
-import localData from "../localData.jsx";
 import { useGlobalContext } from "../context";
 import useFormatter from "../hooks/useFormatter.jsx";
 

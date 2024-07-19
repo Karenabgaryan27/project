@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { Dropdown, Select, Autocomplete, Button, Field, NestedModal, Checkbox } from "../../index.jsx";
 import { useGlobalContext } from "../../context";
-import localData from "../../localData";
+import localData from "../../localData.jsx";
 import useFetch from "../../hooks/useFetch";
 import ReactDOMServer from "react-dom/server";
 import { Tooltip } from 'react-tooltip';

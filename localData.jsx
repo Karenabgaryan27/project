@@ -1,5 +1,4 @@
 import notFound from "./assets/images/not-found.png";
-import { ReactComponent as EmptyCartIcon } from "./assets/images/empty-cart.svg";
 
 
 const images = {
@@ -22,7 +21,6 @@ const localData = {
     images,
     svgs: {
 
-        EmptyCartIcon,
         campaigns: (
             <svg
                 style={{ padding: "2px" }}

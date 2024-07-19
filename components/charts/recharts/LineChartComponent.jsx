@@ -13,11 +13,15 @@ import {
 } from "recharts";
 import useFormatter from "../../../hooks/useFormatter";
 
-const isSmallScreen = window.innerWidth < 768;
-let fontSize = isSmallScreen ? 8 : 12;
-let leftMargin = isSmallScreen ? -20 : -10;
 
-export default function Example({ data = [], defaultData = [], isLoading = false, lines = [] }) {
+export default function LineChartComponent({ data = [], defaultData = [], isLoading = false, lines = [] }) {
+    let isSmallScreen = false 
+    
+    if(typeof window !== "undefined") {
+        isSmallScreen = window?.innerWidth < 768; 
+    }
+    let fontSize = isSmallScreen ? 8 : 12;
+    let leftMargin = isSmallScreen ? -20 : -10;
     // static demoUrl = "https://codesandbox.io/s/simple-line-chart-kec3v";
     const { formatNumber, formatCurrency } = useFormatter();
     return (

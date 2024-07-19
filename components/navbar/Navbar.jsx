@@ -121,6 +121,12 @@ export default function Navbar({ title = "", titlePopup = "" }) {
         );
     };
 
+    let isMobile = false
+
+    if(typeof window !== "undefined") {
+        isMobile =   window.innerWidth < 576
+    }
+
     return (
         <>
             <nav className="navbar navbar-expand-lg" ref={navbarRef}>
@@ -148,7 +154,7 @@ export default function Navbar({ title = "", titlePopup = "" }) {
                         buttonTitle="Connect wallet"
                         buttonStartIcon={deposit}
                         buttonClassName={`rounded-pill deposit-btn ${
-                            window.innerWidth < 576 ? "btn-sm" : ""
+                            isMobile  ? "btn-sm" : ""
                         }`}
                         buttonColor="primary"
                         display={showDepositModal}

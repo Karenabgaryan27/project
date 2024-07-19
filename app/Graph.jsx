@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from "react";
-import localData from "../localData";
+import localData from "../localData.jsx";
 import {
     Dropdown,
     Select,
@@ -10,15 +10,14 @@ import {
     Loading,
     TableSkeleton,
     ChartSkeleton,
-    BarChart, LineChart 
+    BarChart, LineChartComponent 
 } from "../index";
-import { v4 as uuidv4 } from "uuid";
 import { useGlobalContext } from "../context";
 
 import { Tooltip } from "react-tooltip";
 import useFormatter from "../hooks/useFormatter";
 
-export default function CampaignsGraph() {
+export default function Graph() {
     const {
         requestedData: {
             userProfileData,
@@ -235,7 +234,7 @@ export default function CampaignsGraph() {
                             })}
                         </div>
                     </div>
-                    <LineChart
+                    <LineChartComponent
                         // data={filteredGraphData}
                         defaultData={[
                             {

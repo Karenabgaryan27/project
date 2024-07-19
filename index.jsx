@@ -12,5 +12,5 @@ export { default as NestedModal} from './components/modal/nested-modal/NestedMod
 export { default as Checkbox} from './components/checkbox/Checkbox'
 export { default as ConnectWallet} from './components/connect-wallet/ConnectWallet'
 export { default as Calendar} from './components/calendar/Calendar'
-export { default as LineChart} from './components/charts/recharts/LineChart'
+export { default as LineChartComponent} from './components/charts/recharts/LineChartComponent'
 export { default as TableSkeleton} from './components/skeleton/table-skeleton/TableSkeleton'
