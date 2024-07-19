@@ -13,7 +13,7 @@ export default function Home() {
            <div className="row">
                 <div className="col">
                     <h2 className="campaign-title display-2">all campaigns</h2>
-                    <h4 className="description">Monitor metrics, check reports and review performance.</h4>
+                    <h4 className="description">Monitor metrics, check reports and review earnings.</h4>
                 </div>
                 <Wizard />
             </div>

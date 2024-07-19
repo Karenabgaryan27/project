@@ -78,7 +78,7 @@ export default function CampaingsWizard() {
 
                     toggler={
                         <Button
-                            name="Create Campaign"
+                            name="Add new website"
                             variant="contained"
                             startIcon={plus}
                             color="success"

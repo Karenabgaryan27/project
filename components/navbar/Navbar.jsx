@@ -41,11 +41,11 @@ export default function Navbar({ title = "", titlePopup = "" }) {
     const { textPreloader } = localData.images;
 
     useEffect(() => {
-        if ( !navbarRef.current) return;
         const mainContentElement = document.querySelector('.main-content');
-        console.log(mainContentElement)
+        const navbar = document.querySelector('.navbar')
+        if ( !navbar) return;
         const shrink = () => {
-            navbarRef.current.classList.toggle("shrink", mainContentElement.scrollTop > 0);
+            navbar.classList.toggle("shrink", mainContentElement.scrollTop > 0);
         };
 
         mainContentElement.addEventListener("scroll", shrink);
@@ -53,7 +53,7 @@ export default function Navbar({ title = "", titlePopup = "" }) {
         return () => {
             mainContentElement.removeEventListener("scroll", shrink);
         };
-    }, [ navbarRef.current]);
+    }, [ ]);
 
     // DRAWER
     const DrawerComponent = ({ callbackFromParent }) => {

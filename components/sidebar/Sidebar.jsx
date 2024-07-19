@@ -10,6 +10,8 @@ export default function Sidebar() {
     const {
         bar,
         campaigns,
+        chart,
+        code,
         analytics,
         strategist,
         arrowRight,
@@ -67,7 +69,7 @@ export default function Sidebar() {
                                         window.innerWidth < 992 && setShowSidebar(false);
                                     }}
                                 >
-                                    {campaigns}
+                                    {chart}
                                     <span> Statistics </span>
                                     <div
                                      
@@ -88,7 +90,7 @@ export default function Sidebar() {
                                         window.innerWidth < 992 && setShowSidebar(false);
                                     }}
                                 >
-                                    {campaigns}
+                                    {code}
                                     <span> Invocation codes </span>
                                     <div
                                      
