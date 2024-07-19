@@ -19,6 +19,7 @@ export default function LineChartComponent({ data = [], defaultData = [], isLoad
     
     if(typeof window !== "undefined") {
         isSmallScreen = window?.innerWidth < 768; 
+        
     }
     let fontSize = isSmallScreen ? 8 : 12;
     let leftMargin = isSmallScreen ? -20 : -10;
